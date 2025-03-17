@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" style=""><!--<![endif]--><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>IAL2022</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Interactive Adaptive Learning Workshop">
+	<meta name="keywords" content="interactive adaptive learning ecml pkdd ghent">
+	<meta name="author" content="Daniel Kottke">
+
+  <!-- 
+	//////////////////////////////////////////////////////
+
+	FREE HTML5 TEMPLATE 
+	DESIGNED & DEVELOPED by FREEHTML5.CO
+		
+	Website: 		http://freehtml5.co/
+	Email: 			info@freehtml5.co
+	Twitter: 		http://twitter.com/fh5co
+	Facebook: 		https://www.facebook.com/fh5co
+
+	//////////////////////////////////////////////////////
+	 -->
+
+  <!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="">
+	<meta property="og:image" content="">
+	<meta property="og:url" content="">
+	<meta property="og:site_name" content="">
+	<meta property="og:description" content="">
+	<meta name="twitter:title" content="">
+	<meta name="twitter:image" content="">
+	<meta name="twitter:url" content="">
+	<meta name="twitter:card" content="">
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+<!-- 	<link rel="shortcut icon" href="http://ies.uni-kassel.de/p/ial2018/favicon.ico"> -->
+
+	<link href="resources/css.css" rel="stylesheet" type="text/css">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="resources/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="resources/icomoon.css">
+	<!-- Simple Line Icons -->
+	<link rel="stylesheet" href="resources/simple-line-icons.css">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="resources/owl_002.css">
+	<link rel="stylesheet" href="resources/owl.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="resources/bootstrap.css">
+
+	<!-- 
+	Default Theme Style 
+	You can change the style.css (default color purple) to one of these styles
+	
+	1. pink.css
+	2. blue.css
+	3. turquoise.css
+	4. orange.css
+	5. lightblue.css
+	6. brown.css
+	7. green.css
+
+	-->
+	<link rel="stylesheet" href="resources/style.css">
+
+	<!-- Styleswitcher ( This style is for demo purposes only, you may delete this anytime. ) -->
+	<link rel="stylesheet" id="theme-switch" href="resources/style.css">
+	<!-- End demo purposes only -->
+
+
+	<style>
+	/* For demo purpose only */
+	
+	/* For Demo Purposes Only ( You can delete this anytime :-) */
+	#colour-variations {
+		padding: 10px;
+		-webkit-transition: 0.5s;
+	  	-o-transition: 0.5s;
+	  	transition: 0.5s;
+		width: 140px;
+		position: fixed;
+		left: 0;
+		top: 100px;
+		z-index: 999999;
+		background: #fff;
+		/*border-radius: 4px;*/
+		border-top-right-radius: 4px;
+		border-bottom-right-radius: 4px;
+		-webkit-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		-moz-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		-ms-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+	}
+	#colour-variations.sleep {
+		margin-left: -140px;
+	}
+	#colour-variations h3 {
+		text-align: center;;
+		font-size: 11px;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		color: #777;
+		margin: 0 0 10px 0;
+		padding: 0;;
+	}
+	#colour-variations ul,
+	#colour-variations ul li {
+		padding: 0;
+		margin: 0;
+	}
+	#colour-variations li {
+		list-style: none;
+		display: inline;
+	}
+	#colour-variations li a {
+		width: 20px;
+		height: 20px;
+		position: relative;
+		float: left;
+		margin: 5px;
+	}
+	#colour-variations li a[data-theme="style"] {
+		background: #6173f4;
+	}
+	#colour-variations li a[data-theme="pink"] {
+		background: #f64662;
+	}
+	#colour-variations li a[data-theme="blue"] {
+		background: #2185d5;
+	}
+	#colour-variations li a[data-theme="turquoise"] {
+		background: #00b8a9;
+	}
+	#colour-variations li a[data-theme="orange"] {
+		background: #ff6600;
+	}
+	#colour-variations li a[data-theme="lightblue"] {
+		background: #5585b5;
+	}
+	#colour-variations li a[data-theme="brown"] {
+		background: #a03232;
+	}
+	#colour-variations li a[data-theme="green"] {
+		background: #65d269;
+	}
+
+	.option-toggle {
+		position: absolute;
+		right: 0;
+		top: 0;
+		margin-top: 5px;
+		margin-right: -30px;
+		width: 30px;
+		height: 30px;
+		background: #f64662;
+		text-align: center;
+		border-top-right-radius: 4px;
+		border-bottom-right-radius: 4px;
+		color: #fff;
+		cursor: pointer;
+		-webkit-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		-moz-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		-ms-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+	}
+	.option-toggle i {
+		top: 2px;
+		position: relative;
+	}
+	.option-toggle:hover, .option-toggle:focus, .option-toggle:active {
+		color:  #fff;
+		text-decoration: none;
+		outline: none;
+	}
+	
+	
+	.timeline {
+  list-style: none;
+  padding: 20px 0 20px;
+  position: relative;
+}
+.timeline:before {
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  content: " ";
+  width: 3px;
+  background-color: #eeeeee;
+  left: 50%;
+  margin-left: -1.5px;
+}
+.timeline > li {
+  margin-bottom: 20px;
+  position: relative;
+}
+.timeline > li:before,
+.timeline > li:after {
+  content: " ";
+  display: table;
+}
+.timeline > li:after {
+  clear: both;
+}
+.timeline > li:before,
+.timeline > li:after {
+  content: " ";
+  display: table;
+}
+.timeline > li:after {
+  clear: both;
+}
+.timeline > li > .timeline-panel {
+  width: 50%;
+  float: left;
+  border: 1px solid #d4d4d4;
+  border-radius: 2px;
+  padding: 20px;
+  position: relative;
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+}
+.timeline > li.timeline-inverted + li:not(.timeline-inverted),
+.timeline > li:not(.timeline-inverted) + li.timeline-inverted {
+margin-top: -60px;
+}
+
+.timeline > li:not(.timeline-inverted) {
+padding-right:90px;
+}
+
+.timeline > li.timeline-inverted {
+padding-left:90px;
+}
+.timeline > li > .timeline-panel:before {
+  position: absolute;
+  top: 26px;
+  right: -15px;
+  display: inline-block;
+  border-top: 15px solid transparent;
+  border-left: 15px solid #ccc;
+  border-right: 0 solid #ccc;
+  border-bottom: 15px solid transparent;
+  content: " ";
+}
+.timeline > li > .timeline-panel:after {
+  position: absolute;
+  top: 27px;
+  right: -14px;
+  display: inline-block;
+  border-top: 14px solid transparent;
+  border-left: 14px solid #fff;
+  border-right: 0 solid #fff;
+  border-bottom: 14px solid transparent;
+  content: " ";
+}
+.timeline > li > .timeline-badge {
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 1.4em;
+  text-align: center;
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  margin-left: -25px;
+  background-color: #999999;
+  z-index: 100;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+.timeline > li.timeline-inverted > .timeline-panel {
+  float: right;
+}
+.timeline > li.timeline-inverted > .timeline-panel:before {
+  border-left-width: 0;
+  border-right-width: 15px;
+  left: -15px;
+  right: auto;
+}
+.timeline > li.timeline-inverted > .timeline-panel:after {
+  border-left-width: 0;
+  border-right-width: 14px;
+  left: -14px;
+  right: auto;
+}
+.timeline-badge.primary {
+  background-color: #2e6da4 !important;
+}
+.timeline-badge.success {
+  background-color: #3f903f !important;
+}
+.timeline-badge.warning {
+  background-color: #f0ad4e !important;
+}
+.timeline-badge.danger {
+  background-color: #d9534f !important;
+}
+.timeline-badge.info {
+  background-color: #5bc0de !important;
+}
+.timeline-title {
+  margin-top: 0;
+  color: inherit;
+}
+.timeline-body > p,
+.timeline-body > ul {
+  margin-bottom: 0;
+}
+.timeline-body > p + p {
+  margin-top: 5px;
+}
+.section-heading {
+    padding-bottom: 0px;
+    margin-bottom: 20px;
+}
+
+a.pdf {
+    color: #d13b28;
+    vertical-align: super;
+    font-size: 9pt;
+}
+	
+	</style>
+	<!-- End demo purposes only -->
+
+
+	<!-- Modernizr JS -->
+	<script async="" src="resources/analytics.js"></script><script src="resources/modernizr-2.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+	<header role="banner" id="fh5co-header" class="">
+			<div class="container">
+				<!-- <div class="row"> -->
+			    <nav class="navbar navbar-default">
+		        <div class="navbar-header">
+		        	<!-- Mobile Toggle Menu Button -->
+					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+		          	<a class="navbar-brand" href="https://www.activeml.net/ial2022/">IAL2022</a> 
+		        </div>
+		        <div id="navbar" class="navbar-collapse collapse">
+		          <ul class="nav navbar-nav navbar-right">
+		            <li class="active"><a href="#home" data-nav-section="home"><span>Home</span></a></li>
+		            <li class=""><a href="#topic" data-nav-section="topic"><span>Topic</span></a></li>
+		            <li class=""><a href="#dates" data-nav-section="dates"><span>Dates</span></a></li>
+		            <li class=""><a href="#submission" data-nav-section="submission"><span>Submission</span></a></li>
+		            <li class=""><a href="#talk" data-nav-section="talk"><span>Invited Talk</span></a></li>
+		            <li class=""><a href="#program" data-nav-section="program"><span>Program</span></a></li>
+		            <li><a href="#committee" data-nav-section="committee"><span>Committee</span></a></li>
+<!--		            <li><a href="#" data-nav-section="about"><span>About</span></a></li>
+		            <li><a href="#" data-nav-section="services"><span>Services</span></a></li>
+		            <li><a href="#" data-nav-section="features"><span>Features</span></a></li>
+		            <li><a href="#" data-nav-section="testimonials"><span>Testimonials</span></a></li>
+		            <li><a href="#" data-nav-section="pricing"><span>Pricing</span></a></li>
+		            <li><a href="#" data-nav-section="press"><span>Press</span></a></li>-->
+		          </ul>
+		        </div>
+			    </nav>
+			  <!-- </div> -->
+		  </div>
+	</header>
+
+	<div id="home" data-section="home">
+		<div class="user-header" style="background-image:url(images/bg.jpg); background-position: center; ">
+            
+			<!-- You may change the background color here. -->
+				
+			<!-- You may change the background color here.  -->
+				<div class="container" style=" height:700px">
+					<div class="overlay"></div>
+					<div class="container" style="position: relative; padding-top:150px">
+						<div class="row">
+							<div class="col-md-10 col-md-push-1 col-sm-10 col-sm-push-1 text-center">
+								<div class="fh5co-owl-text-wrap">
+									<div class="fh5co-owl-text">
+										<p class="fh5co-sub-lead ">6th International Workshop on</p>
+										<h2 class="fh5co-lead ">Interactive Adaptive Learning (IAL2022)</h2>
+										<h2 class="fh5co-sub-lead ">Co-Located With <a href="https://2022.ecmlpkdd.org/" target="_blank">ECML PKDD 2022</a></h2>
+										<h2 class="fh5co-sub-lead ">23 September 2022 - Grenoble, France</h2>
+										<!--<p class=""><a href="#submission" data-nav-section="submission" class="btn btn-warning btn-lg">Submit Paper <br><small style="font-size:10pt"></small> <span class="label label-success">Deadline extended</span> </a></p>-->
+										<p class=""><a href="#program" data-nav-section="program" class="btn btn-success btn-lg">View program and papers</a></p>
+<!--  										<p class=""><a href="http://2022.ecmlpkdd.org/" class="btn btn-primary btn-lg">Register</a></p> -->
+										<!--<p class=""><a href="http://ceur-ws.org/Vol-2660/" target="_blank" class="btn btn-success btn-lg">Get proceedings at ceur-ws.org</a></p>-->
+<!-- 										<p class=""><a href="pdf/ialatecml2022.pdf" target="_blank" class="btn btn-success btn-lg">Get full proceedings (soon at ceur-ws.org)</a></p> -->
+                    <div class="bottom-right" style="color:rgba(255, 255, 255, .8)">Image © by Archangel12 (<a href="https://creativecommons.org/licenses/by/2.0/deed.en" target="_blank"  style="color:rgba(255, 255, 255, .8)">CC-BY-2.0)</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+		</div>
+	</div>
+	
+	
+	<div id="fh5co-about-us"  data-section="topic">
+		<div class="container" id="topic">
+			<div class="row animated" id="about-us">
+				<div class="col-md-12 section-heading text-center" >
+          <!--<div class="col-md-8 col-md-offset-2 to-animate"  id="makebox">
+            <div class="box to-animate fadeInUp animated" >
+              <div class="icon colored"><span><i class="icon-heart"></i></span></div>
+              <p style="font-size:16pt"> Please join the workshop with ZOOM: <br> <a href="https://zoom.us/j/93019482259?pwd=a0t2MVlGVksvazdEVnRrdFdPQnVVdz09">ZOOM LINK</a> </p>
+              <p>The workshop will be fully virtual. We organized a zoom webinar which is accessible through Whova App or <a href="https://whova.com/portal/webapp/ecmlp_202009/">Whova Web</a>. <br>
+              See also the information at <a href="https://ecmlpkdd2020.net/attending/participate/">https://ecmlpkdd2020.net/attending/participate/</a></p>
+              
+            </div>
+          </div>
+        </div>-->
+				
+				<div class="col-md-12 section-heading text-center" >
+					<h2 class="to-animate fadeInUp animated">Topic</h2>
+					
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 to-animate fadeInUp animated">
+							<h3>Science, technology, and commerce increasingly recognise the importance of machine learning approaches for data-intensive, evidence-based decision making. </h3>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-md-12 text-left">
+					<p class="to-animate fadeInUp animated">
+                    Science, technology, and commerce increasingly recognise the importance of machine learning approaches for data-intensive, evidence-based decision making. 
+                    Moreover, the number of machine learning applications and the volumes of data increase permanently. Nevertheless, the capacities of processing systems, human supervisors, or domain experts remain limited in real-world applications. Furthermore, many applications require a fast reaction to new situations, which means that first predictive models need to be available even if little data is yet available.
+                    Therefore, approaches that optimise the whole learning process are needed, including the interaction with human supervisors, processing systems, and data of various kind and at different timings:
+                    techniques for estimating the impact of additional resources (e.g. data) on the learning progress; methods for active selection of the information processed or queried; techniques for reusing knowledge across time, domains, or tasks, by identifying similarities and adaptation to changes between them; methods for making use of different types of information, such as labelled or unlabelled data, constraints, or domain knowledge. 
+                    Such techniques are studied, for example, in the fields of adaptive, active, semi-supervised, and transfer learning -- mostly in separate lines of research. Combinations that are capable of operating under various constraints, and thereby address the inherent real-world challenges of volume, velocity, and variability of data and data mining systems, are rarely reported. 
+                    Therefore, this workshop aims to bring together researchers and practitioners from these different areas, and to stimulate research in interactive and adaptive machine learning systems as a whole.
+                    It continues a successful series of events at <a href="https://p.ies.uni-kassel.de/ial2017/">ECML PKDD 2017</a> in Skopje (Workshop and Tutorial), IJCNN 2018 in Rio (Tutorial), <a href="https://p.ies.uni-kassel.de/ial2018/">ECML PKDD 2018</a> in Dublin (Workshop), <a href="https://p.ies.uni-kassel.de/ial2019/">ECML PKDD 2019</a> in Würzburg (Workshop and Tutorial), and <a href="https://p.ies.uni-kassel.de/ial2020/">ECML PKDD 2020</a> (hosted in Ghent, online Workshop).
+					
+					<p class="to-animate fadeInUp animated">The workshop aims at discussing techniques and approaches for optimising the whole learning process, including the interaction with human supervisors, processing systems, and includes adaptive, active, semi-supervised, and transfer learning techniques, and combinations thereof in interactive and adaptive machine learning systems make the topic of this workshop. Our objective is to bridge the communities researching and developing these techniques and systems in machine learning and data mining. Therefore, we welcome contributions that present a new problem setting, propose a novel approach, or report experience with the practical deployment of such a system and raise unsolved questions to the research community. 
+                    </p>
+					
+					<p class="to-animate fadeInUp animated">In particular, we welcome contributions that address aspects including, but not limited to:</p>
+					<ul class="to-animate fadeInUp animated">
+					<div style="font-weight:bold; margin-left:-30px">Novel Techniques for Active, Semi-Supervised, Transfer, or Weakly Supervised Learning</div>
+						<li>methods for big, evolving, or streaming data,</li>
+						<li>methods for recent complex model structures such as deep learning neural networks or recurrent neural networks,</li>
+						<li>methods for interacting with imperfect or multiple oracles, e.g. learning from crowds,</li>
+						<li>methods for incorporating domain knowledge and constraints,</li>
+						<li>methods for timing the interaction and for combining different types of information,</li>
+						<li>online and ensemble methods for evolving models and systems, with specific switching and fusion techniques, and (inter-)active data integration techniques,</li>
+						
+          <div style="font-weight:bold; margin-left:-30px; padding-top:15px">Innovative Use and Applications of Active, Semi-Supervised, Transfer, or Weakly Supervised Learning</div>
+						<li>for filtering, forgetting, resampling,</li>
+						<li>for active class or feature selection, e.g. from multi-modal data,</li>
+						<li>for detection of change, outliers, frauds, or attacks,</li>
+						<li>new interactive learning protocols and application scenarios, e.g., brain-computer interfaces, crowdsourcing, ...</li>
+						<li>in application in data-intensive science,</li>
+						<li>in applications with real-world deployment,</li>
+						
+          <div style="font-weight:bold; margin-left:-30px; padding-top:15px">Techniques for Combined Interactive Adaptive Learning</div>
+						<li>methods combining adaptive, active, semi-supervised, or transfer learning techniques,</li>
+						<li>cost-aware methods and methods for estimating the impact of employing additional resources, such as data or processing capacities, on the learning progress,</li>
+						<li>methodologies for the evaluation of such techniques, and comparative studies,</li>
+						<li>methods for automating the control of an interactive adaptive learning process.</li>
+					</ul>
+          </br>
+          </br>
+				</div>
+			</div>
+			
+      <!--<div class="row to-animate fadeInUp animated">
+        <div class="col-xs-12 text-left">
+          <p style="font-weight:bold; "><br>This workshop is sponsored by:</p>
+        </div>
+        <div class="col-md-6 col-md-offset-1 col-sm-8 col-xs-12 text-center">
+          <a href="https://www.uu.nl/" target="_blank">
+            <img class="" src="images/logo-nl.png" alt="" height="60px" style="margin:10px">
+          </a>
+        </div>
+        <div class="col-md-3 col-sm-4 col-xs-12 text-center">
+          <a href="https://laborange.fr/" target="_blank">
+            <img class="" src="images/logo-orange.png" alt=""  height="70px">
+          </a>
+        </div>
+      </div>-->
+		</div>
+	</div>
+	
+	<div id="fh5co-testimonials" data-section="dates" class="animated">
+		<div class="container">
+			<div class="row" id="dates">
+				<div class="col-md-12 section-heading text-center">
+					<h2 class="to-animate fadeInUp animated">Important dates</h2>
+					
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 to-animate fadeInUp animated">
+							<h3 style="color:#fff">The following timeline shows the most important dates for the workshop.</h3>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-lg-12" style="overflow:hidden">
+						<ul class="timeline to-animate fadeInUp animated">
+              <li></li>
+              
+							<li>
+								<div class="timeline-badge success"><i class="glyphicon glyphicon-pencil"></i></div>
+								<div class="timeline-panel" style="background-color:#fff">
+									<div class="timeline-heading">
+										<h4 class="timeline-title">Submission open</h4>
+										<p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 22 April 2022</small></p>
+                    <div class="timeline-body">
+                      <p>You can submit your contributions via <a href="#submission" data-nav-section="submission">EasyChair</a>.</p>
+                    </div>
+									</div>
+								</div>
+							</li>
+							
+							<li></li>
+							
+							<li class="timeline-inverted">
+								<div class="timeline-badge danger"><i class="glyphicon glyphicon-save"></i></div>
+								<div class="timeline-panel" style="background-color:#fff">
+									<div class="timeline-heading">
+										<h4 class="timeline-title">Submission deadline <span class="label label-success">EXTENDED</span></h4>
+										<p><small class="text-muted text-danger"><i class="glyphicon glyphicon-time"></i> <del>12 June 2022</del></small><br/>
+										<small class="text-muted"><i class="glyphicon glyphicon-time"></i> 27 June 2022</small><br>
+									  <!--<small class="text-muted"><i class="glyphicon glyphicon-time"></i> 16 June 2022 (PDF submission) </small></p>
+										<small class="text-muted">Due to many requests, we decided to postpone the deadline for pdf upload for both tracks. Note, that it is still required to register the paper in EasyChair with authors, title, and abstract until 9 June.</small><br>-->
+									</div>
+								</div>
+							</li>
+							
+							<li>
+								<div class="timeline-badge success"><i class="glyphicon glyphicon-star"></i></div>
+								<div class="timeline-panel" style="background-color:#fff">
+									<div class="timeline-heading">
+										<h4 class="timeline-title">Notification <span class="label label-success">POSTPONED</span></h4>
+										<p><small class="text-muted text-danger"><i class="glyphicon glyphicon-time"></i> <del>11 July 2022</del></small><br/>
+										<small class="text-muted"><i class="glyphicon glyphicon-time"></i> 20 July 2022</small></p>
+                    <!--<p>ECML PKDD offers the early bird registration rate until 20 July 2022 .</p>-->
+									</div>
+								</div>
+							</li>
+							
+							<li class="timeline-inverted">
+								<div class="timeline-badge warning"><i class="glyphicon glyphicon-education"></i></div>
+								<div class="timeline-panel" style="background-color:#fff">
+									<div class="timeline-heading">
+										<h4 class="timeline-title">Camera Ready <span class="label label-success">EXTENDED</span></h4>
+										<p><small class="text-muted text-danger"><i class="glyphicon glyphicon-time"></i> <del>25 July 2022</del></small><br/>
+										<small class="text-muted"><i class="glyphicon glyphicon-time"></i> 3 August 2022</small></p>
+									</div>
+								</div>
+							</li>
+							
+							<li>
+								<div class="timeline-badge success"><i class="glyphicon glyphicon-blackboard"></i></div>
+								<div class="timeline-panel" style="background-color:#f8f5e9">
+									<div class="timeline-heading">
+										<h4 class="timeline-title">Workshop (Half Day)</h4>
+										<p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 23 September 2022</small></p>
+										<div class="timeline-body">
+											<p>Co-Located With The The European Conference on Machine Learning and Principles and Practice of Knowledge Discovery  <a href="https://2022.ecmlpkdd.org/" target="_blank">(ECML PKDD 2022)</a>.</p>
+										</div>
+									</div>
+								</div>
+							</li>
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<div id="fh5co-features" data-section="submission" class="animated">
+		<div class="container">
+			<div class="row" id="submission">
+				<div class="col-md-12 section-heading text-center">
+					<h2 class="to-animate fadeInUp animated">Submit your contribution</h2>
+					
+                        <div class="row row-bottom-padded-sm">
+						<div class="col-md-8 col-md-offset-2 to-animate fadeInUp animated">
+								<h3>You can submit your contribution via EasyChair. Please use the link below.</h3>
+                  <h3>Submission is now closed.</h3> 
+						</div>
+                        </div> 
+            <!--<div class="col-md-4 col-md-offset-4 to-animate fadeInUp animated">
+              <a href="https://easychair.org/conferences/?conf=ial2022" target="_blank" class="btn btn-lg btn-primary btn-block">Submit via EasyChair</a><br>
+						</div>-->
+				</div>
+      </div>
+      <div class="row row-bottom-padded-sm">
+        <div class="col-md-4 col-md-offset-1 col-sm-5 col-xs-12 col-xxs-12 fh5co-service to-animate fadeInUp animated" style="background-color:#f8f5e9">
+          <div class="">
+            <h3>Full Paper Track</h3>
+            <p>
+              The full paper track covers new innovative contributions in the area of interactive adaptive learning. If you have a new method already evaluated briefly, a new tool to simplify interaction or some new insights the community might benefit from, please submit a regular paper.
+              The page limit is 8-16 pages (excluding references).
+            </p>
+            <p>
+              Submission Deadline: 27 June 2022
+            </p>
+          </div>	
+        </div>
+        <div class="col-md-4 col-md-offset-2 col-sm-5 col-sm-offset-2 col-xs-12 col-xxs-12 fh5co-service to-animate fadeInUp animated"  style="background-color:#f8f5e9">
+          <div class="">
+            <h3>Extended Abstract Track</h3>
+            <p>
+              The extended abstract track is ideal to discuss new ideas in the area of interactive adaptive learning. We encourage you to submit open challenges in research or industrial applications to initiate a discussion and find colleagues to collaborate with. 
+              The page limit is 2-4 pages (excluding references).
+            </p>
+            <p>
+              Submission Deadline: 27 June 2022
+            </p>
+          </div>
+        </div>
+        <div class="clearfix visible-sm-block visible-xs-block"></div>
+      </div>
+				
+      <div class="row row-bottom-padded-sm">
+        <div class="col-md-4 col-sm-6 col-xs-12 col-xxs-12 fh5co-service to-animate fadeInUp animated">
+          <div class="fh5co-icon"><i class="icon-share2"></i></div>
+          <div class="fh5co-desc">
+            <h3>Indexed Publishing</h3>
+            <p>All accepted papers will be published at ceur-ws.org (indexed by e.g. google scholar) or within Springer LNCS proceedings depending on the number of submissions. 
+            Reviews are single-blind.</p>
+          </div>	
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12 col-xxs-12 fh5co-service to-animate fadeInUp animated">
+          <div class="fh5co-icon"><i class="icon-info"></i></div>
+          <div class="fh5co-desc">
+            <h3>LNCS Style</h3>
+            <p>The paper must be be written in English and contain author names, affiliations, and email addresses. The paper must be in PDF using the LNCS format. See instructions <a href="https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines">here</a>.</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12 col-xxs-12 fh5co-service to-animate fadeInUp animated">
+          <div class="fh5co-icon"><i class="icon-pie-chart"></i></div>
+          <div class="fh5co-desc">
+            <h3>Presentation</h3>
+            <p>All accepted papers are presented in spotlight talks and/or poster sessions. At least one author of each accepted paper must be registered to the workshop.</p>
+          </div>
+        </div>
+        <div class="clearfix visible-sm-block visible-xs-block"></div>
+      </div>
+		</div>
+	</div>
+	
+	<div id="fh5co-testimonials" data-section="talk">
+		<div class="container">
+			<div class="row" id="talk">
+			
+				<div class="col-md-12 section-heading text-center to-animate fadeInUp animated">
+					<h2 class="" id="invitedtalk">Invited Talks</h2>
+			
+<!--          <div class="clearfix visible-sm-block visible-xs-block"></div>
+          <div class="col-md-12 col-lg-12 col-lg-offset-0" style="color:#fff">
+            to be determined
+          </div>-->
+          
+          <div class="clearfix visible-sm-block visible-xs-block"></div>
+          <div class="col-md-12 col-lg-12 col-lg-offset-0" style="color:#fff">        
+            <div class="col-md-8 col-xs-9 col-lg-8 col-md-offset-2" style="line-height: 1.6em; text-align:left; color:#fff">
+              <i>Isabelle Guyon (Prof. U. Paris-Saclay, USA Researcher INRIA, President ChaLearn)</i>  &nbsp; &nbsp;
+              <a href="https://guyon.chalearn.org/" target="_blank"><i class="glyphicon glyphicon-globe" style="color:#fff"></i></a> &nbsp;
+              <a href="https://scholar.google.com/citations?user=d_4MbDQAAAAJ" target="_blank"><i class="glyphicon glyphicon-education" style="color:#fff"></i></a></br>
+              <b>Title: Active meta-learning</b>
+              </br>
+              While Deep Learning keeps obtaining big successes in AI application, improving performance merely by increasing dataset size or computational resources is not going to be sustainable. Transfer learning, and its generalization to multiple data sources and target domains, called meta-learning, is offering a path towards more efficient use of data and resources, leveraging experience gained from task to task by learning systems capable of "learning to learn". The next step to make progress is to incorporate an active selection of tasks and/or models to accelerate meta-learning, i.e. to perform "active meta-learning". This can be performed not only by using heuristic search or Bayesian optimization, but also by involving reinforcement learning. Indeed, active meta-learning can be cast as a Reveal game, a Markov decision process of difficulty intermediary between multi-armed bandits and POMDP. We will illustrate how active meta-learning problems have been solved with various techniques on several benchmarks and challenges, including the recent IJCNN/AutoML-conf 2022 "Meta-learning from learning curves" challenges, in which  RL techniques such as DDQN fare well. The work presented was done in collaboration with Lisheng Sun, Zhengying Liu, Nathan Grinsztajn, and Manh Hung Nguyen
+              </br>
+              </br>
+              <i>Isabelle Guyon is passionate about promoting artificial intelligence and machine learning methods to a wide audience. While she was working at Clopinet, she founded ChaLearn - a non-profit organisation which organises machine learning challenges, which she chairs. Today, ChaLearn is still setting up challenges in partnership with local authorities such as the Île-de-France region, or with major companies such as Dassault or RTE. [Text by universite-paris-saclay.fr]</i>
+            </div>
+            <div class="col-md-2 col-xs-3" style="overflow:hidden">
+              <img src="images/isabelle.png" style="width:100%">
+            </div>  
+          </div>
+          
+          
+<!--          <div class="clearfix visible-sm-block visible-xs-block"></div>
+          <div class="col-md-12 col-lg-12 col-lg-offset-0" style="color:#fff">
+            <div class="col-md-2 col-xs-3" style="overflow:hidden">
+              <img src="images/alison.png" style="width:100%">
+            </div>          
+            <div class="col-md-8 col-xs-9 col-lg-8" style="line-height: 1.6em; text-align:left; color:#fff">
+              <i>Alison M Smith-Renner (Dataminr)</i> &nbsp; &nbsp;
+              <a href="http://alisonmsmith.github.io/" target="_blank"><i class="glyphicon glyphicon-globe" style="color:#fff"></i></a> &nbsp;
+              <a href="https://scholar.google.com/citations?user=z9vKkYsAAAAJ" target="_blank"><i class="glyphicon glyphicon-education" style="color:#fff"></i></a></br>
+              <b>Designing for the Human-in-the-Loop: Unpredictable Control in Interactive Machine Learning </b></br>
+              Machine learning (ML) systems help people analyze, understand, and make decisions from data, but these systems also need help to personalize recommendations, maintain high classification accuracy, or adapt to new domains. Interactive ML techniques let users control ML models with iterative feedback. However, these models must balance user input and the underlying data, meaning they sometimes update slowly, poorly, or unpredictably—either by not incorporating user input as expected or by making other unexpected changes. Prior research in IML typically focuses on user control simply in terms of whether or how users provide model feedback, with little attention paid to users’ reactions when their feedback is not applied predictably. In this talk, I'll describe two studies examining user interaction in an IML case where controls can be unpredictable, yet are easy to validate: interactive topic modeling. This work advances our understanding of users' experience and expectations related to the control of IML systems.
+              </br>
+              </br>              
+              <i>Alison Smith-Renner is a Senior Research Scientist at Dataminr, where she designs, builds, and evaluates intelligent systems for augmenting human workflows. Her research interests lie at the intersection of AI and HCI, focusing on transparency and control for human-in-the-loop systems to engender appropriate trust and improve human performance. Alison received her Ph.D. in Computer Science from the University of Maryland, College Park. She is active in the explainable AI and human-centered AI research communities.</i>
+              </br>
+            </div>
+          </div>-->
+          
+          <!--<div class="clearfix visible-sm-block visible-xs-block"></div>
+          <div class="col-md-12 col-lg-12 col-lg-offset-0" style="color:#fff">        
+            <div class="col-md-8 col-xs-9 col-lg-8 col-md-offset-2" style="line-height: 1.6em; text-align:left; color:#fff">
+              <i>Andreas Holzinger (Medical University Graz, Austria)</i>  &nbsp; &nbsp;
+              <a href="https://www.aholzinger.at/" target="_blank"><i class="glyphicon glyphicon-globe" style="color:#fff"></i></a> &nbsp;
+              <a href="https://scholar.google.com/citations?user=BTBd5V4AAAAJ" target="_blank"><i class="glyphicon glyphicon-education" style="color:#fff"></i></a></br>
+              <b>From Explainable AI to Human-Centered AI</b></br>
+              The problem of explainability is as old as AI itself and classic AI represented comprehensible retraceable approaches. Their weakness was in dealing with non-linearities and the intrinsic uncertainties of medical data. Advances in data-driven statistical machine learning have led to the current renaissance of AI, but the solutions are becoming increasingly complex and opaque. Due to increasing social, ethical, and legal aspects of AI in medicine, explainable AI (xAI) is attracting much interest within the international research community. While xAI deals with the implementation of transparency and traceability of statistical black‐box machine learning methods, there is a pressing need to go beyond xAI, e.g. to extent explainability with causability. The integrative backbone for this approach is in interactive machine learning with the human-in-the-loop because a human domain expert complements AI with implicit knowledge. Humans are robust, can generalize from few examples, understand relevant representations and concepts and are able to explain causal links between them. Consequently, more research is needed on how human experts explain their decisions by examining their strategies, as they are (but not always) able to describe the underlying explanatory factors. Formalized, these can be used to build structural causal models of human decision making and characteristics can be mapped back to train AI. Finally, such an AI-ecosystem needs advanced Human-AI interfaces, that allow to ask questions of why, but also to ask for counterfactuals, i.e. what-if. This interactivity between human and AI will contribute to enhance robustness, reliability, accountability, fairness and trust in AI and foster ethical responsible machine learning with the human-in-control.
+              </br>
+              </br>
+            </div>
+            <div class="col-md-2 col-xs-3" style="overflow:hidden">
+              <img src="images/andreas.png" style="width:100%">
+            </div>  -->
+          
+          <!--</div>
+        <div class="clearfix visible-sm-block visible-xs-block"></div>
+        <div class="col-md-10 col-md-offset-1 to-animate " >
+          <div class="col-md-8 col-md-offset-2 col-xs-9" style="line-height: 1.6em; text-align:right">
+            <i>Andreas Holzinger</i></br>
+            <b>Interactive Machine Learning</b></br>
+            Andreas Holzinger promotes a synergistic approach by integration of two areas to understand intelligence: Human-Computer Interaction (HCI) &amp; Knowledge Discovery/Data Mining (KDD). Andreas has pioneered in interactive machine learning (iML) with the human-in-the-loop. Andreas’ goal is to augment human intelligence with artificial intelligence to help to solve problems in health informatics.
+            </br>
+            </br>
+          </div>
+          <div class="col-md-2 col-xs-3" style="overflow:hidden">
+            <img src="images/andreas.png" style="width:100%">
+          </div>          
+        </div>
+        <div class="clearfix visible-sm-block visible-xs-block"></div>
+        <div class="col-md-10 col-md-offset-1 to-animate " >
+          <div class="col-md-2 col-xs-3" style="overflow:hidden">
+            <img src="images/georg.png" style="width:100%">
+          </div>          
+          <div class="col-md-8 col-xs-9" style="line-height: 1.6em;">
+            <i>Georg Krempl</i></br>
+            <b>Towards a new Paradigm: Influential Machine Learning </b></br>
+            The predominant paradigm for machine learning-based prediction algorithms is that they act as observers in their environment. However, as their decisions become put into action, this paradigm neglects their influential role, which might lead to self-fulfilling or self-defeating prophecies. This talk is a short introduction to this topic: infuencial machine learning.
+            </br>
+            </br>
+          </div>-->
+          </div>
+          <div class="clearfix visible-sm-block visible-xs-block"></div>
+        </div>
+        
+		</div>
+	</div>
+	
+	<div id="fh5co-features" data-section="program">
+		<div class="container">
+			<div class="row" id="program">
+				<div class="col-md-12 section-heading text-center to-animate fadeInUp animated">
+					<h2 class="">Program</h2>
+					
+          <!--<div class="clearfix visible-sm-block visible-xs-block"></div>
+          <div class="col-md-12 col-lg-12 col-lg-offset-0" style="">
+            to be determined
+          </div>-->
+          
+          <div class="clearfix visible-sm-block visible-xs-block"></div>
+          <div class="col-md-12 col-lg-12 col-lg-offset-0">
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 subtext to-animate fadeInUp animated">
+               The full proceedings of the workshop are available here: <a href="pdf/ialatecml2022.pdf" target="_blank" >Full proceedings</a>
+						</div>
+					</div>
+					</br>
+				</div>
+				
+				<div class="col-md-8 col-md-offset-2 text-left to-animate fadeInUp animated">
+					<div class="box to-animate fadeInUp animated">
+						<table class="table table-condensed">
+							<tbody>
+							<tr>
+								<th>Time</th>
+								<th>Program</th>
+								<th>Presenter/Author</th>
+							</tr>
+							<tr style="background-color:rgb(238, 245, 233);">
+								<td width="14%" style="font-weight: bold; text-align:right">14:30 - 16:30</td>
+								<td> <b>Session 1:</b> </td>
+								<td></td>
+							</tr>
+							<tr style="background-color:rgb(238, 245, 233);">
+								<td style="border-top:none; text-align:right">5m</td>
+								<td> Introduction </td>
+								<td></td>
+							</tr>
+							<tr style="background-color:rgb(248, 245, 233);">
+								<td style="border-top:none; text-align:right">60m</td>
+								<td> <b>Invited Talk: 
+                    <a href="#invitedtalk">Title: Active meta-learning </a></b></td>
+								<td>Isabelle Guyon</td>
+							</tr>
+							<tr style="background-color:rgb(228, 245, 253);">
+								<td style="border-top:none; text-align:right">15m</td>
+								<td>A Concept for Automated Polarized Web Content Annotation based on Multimodal Active Learning &nbsp;&nbsp;
+                  <a href="pdf/ialatecml_paper1.pdf" target="_blank"><i class="glyphicon glyphicon-file" style="color:#888"></i></a>
+                </td>
+								<td>M. Herde, D. Huseljic, J. Mitrović, M. Granitzer, B. Sick</td>
+							</tr>
+							<tr style="background-color:rgb(228, 245, 253);">
+								<td style="border-top:none; text-align:right">20m</td>
+								<td>BioSegment: Active Learning segmentation for 3D imaging &nbsp;&nbsp;
+                  <a href="pdf/ialatecml_paper2.pdf" target="_blank"><i class="glyphicon glyphicon-file" style="color:#888"></i></a>
+                </td>
+								<td>B. Rombaut, J. Roels, Y. Saeys</td>
+							</tr>
+							<tr style="background-color:rgb(228, 245, 253);">
+								<td style="border-top:none; text-align:right">20m</td>
+								<td>Enhancing Active Learning with Weak Supervision and Transfer Learning by Leveraging Information and Knowledge Sources &nbsp;&nbsp;
+                  <a href="pdf/ialatecml_paper3.pdf" target="_blank"><i class="glyphicon glyphicon-file" style="color:#888"></i></a>
+                </td>
+								<td>L. Rauch, D. Huseljic, B. Sick</td>
+							</tr>
+							<tr>
+								<td colspan="3" align="center"><i>Break</i></td>
+							</tr>
+							
+							<tr style="background-color:rgb(238, 245, 233);">
+								<td style="font-weight: bold; text-align:right">17:00 - 18:05</td>
+								<td> <b>Session 2:</b> </td>
+								<td></td>
+							</tr>
+							<tr style="background-color:rgb(228, 245, 253);">
+								<td style="border-top:none; text-align:right">15m</td>
+								<td>Accelerating Diversity Sampling for Deep Active Learning By Low-Dimensional Representations &nbsp;&nbsp;
+                  <a href="pdf/ialatecml_paper4.pdf" target="_blank"><i class="glyphicon glyphicon-file" style="color:#888"></i></a>
+                </td>
+								<td>S. Gilhuber, M. Berrendorf, Y. Ma, T. Seidl</td>
+							</tr>
+							<tr style="background-color:rgb(228, 245, 253);">
+								<td style="border-top:none; text-align:right">20m</td>
+								<td>A Practical Evaluation of Active Learning Approaches for Object Detection &nbsp;&nbsp;
+                  <a href="pdf/ialatecml_paper5.pdf" target="_blank"><i class="glyphicon glyphicon-file" style="color:#888"></i></a>
+                </td>
+								<td>J. Schneegans, M. Bieshaar, B. Sick</td>
+							</tr>
+							<tr style="background-color:rgb(228, 245, 253);">
+								<td style="border-top:none; text-align:right">20m</td>
+								<td>Certifiable Active Class Selection in Multi-Class Classification &nbsp;&nbsp;
+                  <a href="pdf/ialatecml_paper6.pdf" target="_blank"><i class="glyphicon glyphicon-file" style="color:#888"></i></a>
+                </td>
+								<td>M. Senz, M. Bunse, K. Morik</td>
+							</tr>
+							<tr style="background-color:rgb(238, 245, 233);">
+								<td style="border-top:none; text-align:right">10m</td>
+								<td>Closing and information about scikit-activeml</td>
+								<td>D. Kottke</td>
+							</tr>
+						</tbody></table>
+					</div>
+				</div>
+      
+				<!--<div class="col-md-12 section-heading text-center to-animate fadeInUp animated">
+          <div class="box to-animate fadeInUp animated">
+            <div class="col-md-8 col-md-offset-2 subtext ">
+              <h3 id="posters">Poster Session</h3>
+            </div>
+          </div>
+        </div>
+        
+				<div class="col-md-8 col-md-offset-2 text-left to-animate fadeInUp animated">
+					<div class="box to-animate fadeInUp animated">
+						<table class="table table-condensed">
+							<tbody><tr>
+								<th>Short Paper</th>
+								<th>Presenter/Author</th>
+							</tr>
+							<tr>
+								<td>Combating Stagnation in Reinforcement Learning Through 'Guided Learning' With 'Taught-Response Memory'
+                    <a class="pdf" href="pdf/IAL_poster_tunstead.pdf" target="_blank">[poster]</a></td>
+								<td>Keith Tunstead, Joeran Beel</td>
+							</tr>
+							<tr>
+								<td>Towards Active Simulation Data Mining
+                    <a class="pdf" href="pdf/IAL_poster_bunse.pdf" target="_blank">[poster]</a></td>
+								<td>Mirko Bunse, Amal Saadallah and Katharina Morik</td>
+							</tr>
+							<tr>
+								<td>Active Feature Acquisition For Opinion Stream Classification Under Drift
+                    <a class="pdf" href="pdf/IAL_poster_shivakumaraswamy.pdf" target="_blank">[poster]</a></td>
+								<td>Ranjith Shivakumaraswamy, Christian Beyer, Vishnu Unnikrishnan, Eirini Ntoutsi, Myra Spiliopoulou</td>
+							</tr>
+						</tbody></table>
+					</div>
+				</div>-->
+				<!--
+				
+				<div class="col-md-12 section-heading text-center to-animate fadeInUp animated">
+					<h2 class="" id="invitedtalk">Invited Talk</h2>
+			
+          <div class="clearfix visible-sm-block visible-xs-block"></div>
+          <div class="col-md-12 col-lg-12 col-lg-offset-0  ">
+            <div class="col-md-2 col-xs-3" style="overflow:hidden">
+              <img src="images/nadia.png" style="width:100%">
+            </div>          
+            <div class="col-md-8 col-xs-9 col-lg-8" style="line-height: 1.6em; text-align:left;">
+              <i>Nadia Boukhelifa</i></br>
+              <b>Evaluation of Interactive Machine Learning Systems </b></br>
+                The evaluation of interactive machine learning systems remains a difficult task. These systems learn from and adapt to the human, but at the same time, the human receives feedback and adapts to the system. Getting a clear understanding of these subtle mechanisms of co-operation and co-adaptation is challenging. In this chapter, we report on our experience in designing and evaluating various interactive machine learning applications from different domains. We argue for coupling two types of validation: algorithm-centred analysis, to study the computational behaviour of the system; and human-centred evaluation, to observe the utility and effectiveness of the application for end-users. We use a visual analytics application for guided search, built using an interactive evolutionary approach, as an exemplar of our work. Our observation is that human-centred design and evaluation complement algorithmic analysis, and can play an important role in addressing the “black-box” effect of machine learning. Finally, we discuss research opportunities that require human-computer interaction methodologies, in order to support both the visible and hidden roles that humans play in interactive machine learning.</br>
+                  <a class="" href="pdf/IAL_invited_boukhelifa.pdf" target="_blank">Get the slides here.</a>
+              </br>
+              </br>
+            </div>
+          </div>-->
+          <!--</div>
+        <div class="clearfix visible-sm-block visible-xs-block"></div>
+        <div class="col-md-10 col-md-offset-1 to-animate " >
+          <div class="col-md-8 col-md-offset-2 col-xs-9" style="line-height: 1.6em; text-align:right">
+            <i>Andreas Holzinger</i></br>
+            <b>Interactive Machine Learning</b></br>
+            Andreas Holzinger promotes a synergistic approach by integration of two areas to understand intelligence: Human-Computer Interaction (HCI) &amp; Knowledge Discovery/Data Mining (KDD). Andreas has pioneered in interactive machine learning (iML) with the human-in-the-loop. Andreas’ goal is to augment human intelligence with artificial intelligence to help to solve problems in health informatics.
+            </br>
+            </br>
+          </div>
+          <div class="col-md-2 col-xs-3" style="overflow:hidden">
+            <img src="images/andreas.png" style="width:100%">
+          </div>          
+        </div>
+        <div class="clearfix visible-sm-block visible-xs-block"></div>
+        <div class="col-md-10 col-md-offset-1 to-animate " >
+          <div class="col-md-2 col-xs-3" style="overflow:hidden">
+            <img src="images/georg.png" style="width:100%">
+          </div>          
+          <div class="col-md-8 col-xs-9" style="line-height: 1.6em;">
+            <i>Georg Krempl</i></br>
+            <b>Towards a new Paradigm: Influential Machine Learning </b></br>
+            The predominant paradigm for machine learning-based prediction algorithms is that they act as observers in their environment. However, as their decisions become put into action, this paradigm neglects their influential role, which might lead to self-fulfilling or self-defeating prophecies. This talk is a short introduction to this topic: infuencial machine learning.
+            </br>
+            </br>
+          </div>-->
+        </div>
+        <div class="clearfix visible-sm-block visible-xs-block"></div>
+			</div>
+		</div>
+	</div>
+
+	<div id="fh5co-our-services" data-section="committee" class="animated" style="background-color:#fdfbe4">
+		<div class="container">
+			<div class="row row-bottom-padded-sm" id="committee">
+				<div class="col-md-12 section-heading text-center">
+					<h2 class="to-animate fadeInUp animated">Committee</h2>
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 to-animate fadeInUp animated">
+							<h3>Organizing Committee: <br><b>ial2022 (at) easychair.org</b></h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 col-md-offset-2 col-sm-6">
+					<div class="box to-animate fadeInUp animated">
+						<div class="icon colored-3"><span><i class="icon-user"></i></span></div>
+						<h3>Daniel Kottke</h3>
+						<p>daniel.kottke (at) uni-kassel.de <br>University of Kassel, Germany</p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6">
+					<div class="box to-animate fadeInUp animated">
+						<div class="icon colored-3"><span><i class="icon-user"></i></span></div>
+						<h3>Georg Krempl</h3>
+						<p>g.m.krempl (at) uu.nl <br>Utrecht University, Netherlands</p>
+					</div>
+				</div>
+<!--				<div class="col-md-4 col-sm-6">
+					<div class="box to-animate fadeInUp animated">
+						<div class="icon colored-3"><span><i class="icon-user"></i></span></div>
+						<h3>Vincent Lemaire</h3>
+						<p>vincent.lemaire (at) orange.com <br>Orange Labs, France</p>
+					</div>
+				</div>-->
+				<div class="col-md-4 col-md-offset-2 col-sm-6">
+					<div class="box to-animate fadeInUp animated">
+						<div class="icon colored-3"><span><i class="icon-user"></i></span></div>
+						<h3>Barbara Hammer</h3>
+						<p>bhammer (at) techfak.uni-bielefeld.de   <br>University of Bielefeld, Germany</p>
+					</div>
+				</div>
+				<div class="col-md-offset-0 col-md-4 col-sm-6">
+					<div class="box to-animate fadeInUp animated">
+						<div class="icon colored-3"><span><i class="icon-user"></i></span></div>
+						<h3>Andreas Holzinger</h3>
+						<p>a.holzinger (at) hci-kdd.org <br>University of Natural Resources and Life Sciences Vienna, Austria</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row row-bottom-padded-sm" id="committee">
+				<div class="col-md-12 section-heading text-center">
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 to-animate fadeInUp animated">
+							<h3>Steering Committee:</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 col-md-offset-2 col-sm-6">
+				<div class="box to-animate fadeInUp animated">
+					<div class="icon colored-3"><span><i class="icon-user"></i></span></div>
+					<h3>Vincent Lemaire</h3>
+					<p>vincent.lemaire (at) orange.com <br>Orange Labs, France</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 col-sm-6">
+					<div class="box to-animate fadeInUp animated">
+						<div class="icon colored-3"><span><i class="icon-user"></i></span></div>
+						<h3>Robi Polikar</h3>
+						<p>polikar (at) rowan.edu <br>Rowan University, USA</p>
+					</div>
+				</div>
+				<div class="col-md-4 col-md-offset-2 col-sm-6">
+					<div class="box to-animate fadeInUp animated">
+						<div class="icon colored-3"><span><i class="icon-user"></i></span></div>
+						<h3>Bernhard Sick</h3>
+						<p>bsick (at) uni-kassel.de <br>University of Kassel, Germany</p>
+					</div>
+				</div>
+				<div class="col-md-4 col-md-offset-0 col-sm-6">
+					<div class="box to-animate fadeInUp animated">
+						<div class="icon colored-3"><span><i class="icon-user"></i></span></div>
+						<h3>Adrian Calma</h3>
+						<p>adrian.calma (at) uni-kassel.de<br>University of Kassel, Germany</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row row-bottom-padded-sm">
+				<div class="col-md-12 section-heading text-center">
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 to-animate fadeInUp animated">
+							<h3>Program Committee:</h3>
+						</div>
+					</div>
+				</div>
+      </div>
+			<div class="row">
+        <div class="col-sm-6">
+          <div class="box to-animate fadeInUp animated">
+          <div class="icon colored-6"><span><i class="icon-user"></i></span></div>
+<!--             <div><b>to be determined</div> -->
+            <div><b>Mirko Bunse</b> (Dortmund University)</div>
+            <div><b>Marek Herde</b> (University of Kassel)</div>
+            <div><b>Martin Holena</b> (Institute of Computer Science)</div>
+            <div><b>Denis Huseljic</b> (University of Kassel)</div>
+            <div><b>Dino Ienco</b> (INRAE Montpellier)</div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="box to-animate fadeInUp animated">
+          <div class="icon colored-6"><span><i class="icon-user"></i></span></div>
+            <div><b>Jörg Schlötterer</b> (University of Duisburg-Essen)</div>
+            <div><b>Christin Seifert</b> (University of Duisburg-Essen)</div>
+            <div><b>Vinicius Souza</b> (Pontifícia Universidade Católica do Paraná)</div>
+            <div><b>Myra Spiliopoulou</b> (University of Magdeburg)</div>
+          </div>
+        </div>
+			</div>
+		</div>
+	</div>
+
+
+	<footer id="footer" role="contentinfo">
+		<div class="container">
+			<div class="row row-bottom-padded-sm">
+				<div class="col-md-12">
+					<p class="copyright text-center">© 2022 IAL. All Rights Reserved. <br> <a href="https://p.ies.uni-kassel.de/impress.html" target="_blank">Impressum</a> | Free HTML5 Template by <a href="http://freehtml5.co/" target="_blank">FREEHTML5.co</a> | Images by <a href="http://pexels.com/" target="_blank">Pexels</a>,  <a href="http://unsplash.com/" target="_blank">Unsplash</a></p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	
+	<!-- jQuery -->
+	<script src="resources/jquery_002.js"></script>
+	<!-- jQuery Easing -->
+	<script src="resources/jquery.js"></script>
+	<!-- Bootstrap -->
+	<script src="resources/bootstrap.js"></script>
+	<!-- Waypoints -->
+	<script src="resources/jquery_003.js"></script>
+	<!-- Owl Carousel -->
+	<script src="resources/owl.js"></script>
+
+
+	<!-- Main JS (Do not remove) -->
+	<script src="resources/main.js"></script>
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-89258629-1', 'auto');
+		ga('send', 'pageview');
+
+	</script>
+	
+
+</div></body></html>
